@@ -1,18 +1,19 @@
- #!/usr/bin/env bash
-#A bash Script that display "bad luck" on the 4th, "good luck" on the 8th, and "Best School" on the rest of iterations
+#!/usr/bin/env bash
+# This script uses a while loop to display "Best School", "bad luck", or "good luck" based on the iteration number.
+# It displays "bad luck" for the 4th iteration, "good luck" for the 8th iteration, and "Best School" for all other iterations.
 
-n=1
+count=0
 
-while [ $n -le 10 ]
+while [ $count -lt 10 ]
 do
-	if [ $n -eq 4 ]
-	then 
-		echo "bad luck"
-	elif [ $n -eq 8 ]
-	then
-		echo "good luck"
-	else
-		echo "Best School"
-	fi
-	((n+=1))
+  if [ $count -eq 3 ]
+  then
+    echo "bad luck"
+  elif [ $count -eq 7 ]
+  then
+    echo "good luck"
+  else
+    echo "Best School"
+  fi
+  (( count++ ))
 done
