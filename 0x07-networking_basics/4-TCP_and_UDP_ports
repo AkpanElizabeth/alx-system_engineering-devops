@@ -1,5 +1,5 @@
-#!/urs/bin/evn bash
-#Bash script that displays listening ports that only shows listening sockets
-#That shows the PID and name of the program to which each socket belongs
+#!/usr/bin/env bash
+# This displays listening ports and includes listening sockets as well
+# + as the PID and name of the program to which each socket belongs.
 
-netstat -1 --program
+netstat -l --program
